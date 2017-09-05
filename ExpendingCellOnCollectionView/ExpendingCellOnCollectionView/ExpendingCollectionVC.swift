@@ -66,6 +66,11 @@ extension ExpendingCollectionVC: UICollectionViewDataSource,UICollectionViewDele
         obOfHeader.buttonOnHeader.tag = indexPath.section
         obOfHeader.girdButton.tag = indexPath.section
         obOfHeader.headerLabel.text = dataInSectionHeader[indexPath.section]
+        if self.clickOnButton == false{
+            obOfHeader.imageOnGridButton.image = UIImage(named: "table")
+        }else{
+            obOfHeader.imageOnGridButton.image = UIImage(named: "grid")
+       }
         return obOfHeader
     }
 //    -------------------- For number of cell's --------------------
@@ -103,14 +108,13 @@ extension ExpendingCollectionVC: UICollectionViewDataSource,UICollectionViewDele
     }
 //    ---------------- Set height and width while clicking on grid button -------------
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        guard  let obOfHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HeaderClass", for: indexPath) as? HeaderClass else{fatalError()}
+
         if self.clickOnButton == false{
-//            obOfHeader.girdButton.setTitle("Table", for: .normal)
             return CGSize(width: 200, height: 170)
         }else{
             let cellWidth = UIScreen.main.bounds.size.width
             return CGSize(width: cellWidth, height: 100)
-//            obOfHeader.girdButton.setTitle("Grid", for: .normal)
+
 
         }
         
@@ -130,6 +134,7 @@ class HeaderClass: UICollectionReusableView {
     @IBOutlet weak var buttonOnHeader: UIButton!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var girdButton: UIButton!
+    @IBOutlet weak var imageOnGridButton: UIImageView!
     
 }
 

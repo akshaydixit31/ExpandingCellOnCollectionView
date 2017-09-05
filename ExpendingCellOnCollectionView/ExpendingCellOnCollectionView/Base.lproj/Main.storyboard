@@ -80,22 +80,31 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkj-KY-Ckj">
-                                            <rect key="frame" x="360" y="10" width="46" height="30"/>
-                                            <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <state key="normal" title="Button">
+                                            <rect key="frame" x="376" y="10" width="30" height="30"/>
+                                            <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                             <connections>
                                                 <action selector="girdButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gfP-Hx-fKZ"/>
                                             </connections>
                                         </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CHp-cE-pZ7">
+                                            <rect key="frame" x="376" y="10" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="Hjb-iV-fqW"/>
+                                                <constraint firstAttribute="height" constant="30" id="rvA-G8-3L8"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="OV1-sc-3Q0" firstAttribute="top" secondItem="DRN-sW-6WW" secondAttribute="top" id="63l-3Y-4iT"/>
+                                        <constraint firstItem="CHp-cE-pZ7" firstAttribute="centerY" secondItem="DRN-sW-6WW" secondAttribute="centerY" id="7Nz-wI-GSJ"/>
                                         <constraint firstAttribute="trailing" secondItem="OV1-sc-3Q0" secondAttribute="trailing" id="99x-g1-kGS"/>
                                         <constraint firstAttribute="trailing" secondItem="hkj-KY-Ckj" secondAttribute="trailing" constant="8" id="DEN-Dx-qAD"/>
                                         <constraint firstItem="hkj-KY-Ckj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="DRN-sW-6WW" secondAttribute="leading" constant="20" symbolic="YES" id="GMO-wf-t8D"/>
+                                        <constraint firstAttribute="trailing" secondItem="CHp-cE-pZ7" secondAttribute="trailing" constant="8" id="Ol8-lv-pah"/>
                                         <constraint firstItem="xtV-4r-q7E" firstAttribute="centerY" secondItem="DRN-sW-6WW" secondAttribute="centerY" id="VEf-iG-Jz4"/>
                                         <constraint firstItem="xtV-4r-q7E" firstAttribute="centerX" secondItem="DRN-sW-6WW" secondAttribute="centerX" id="VdA-aD-XbT"/>
                                         <constraint firstItem="hkj-KY-Ckj" firstAttribute="centerY" secondItem="DRN-sW-6WW" secondAttribute="centerY" id="Yo0-uw-7bR"/>
@@ -105,6 +114,7 @@
                                         <outlet property="buttonOnHeader" destination="OV1-sc-3Q0" id="1us-LB-Eef"/>
                                         <outlet property="girdButton" destination="hkj-KY-Ckj" id="LPq-bX-x9p"/>
                                         <outlet property="headerLabel" destination="xtV-4r-q7E" id="xc0-6e-QCa"/>
+                                        <outlet property="imageOnGridButton" destination="CHp-cE-pZ7" id="51y-a3-byO"/>
                                     </connections>
                                 </collectionReusableView>
                             </collectionView>
@@ -124,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3177" y="-503"/>
+            <point key="canvasLocation" x="-3178.2608695652175" y="-503.804347826087"/>
         </scene>
     </scenes>
 </document>
